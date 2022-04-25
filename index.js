@@ -57,12 +57,12 @@ const game = function(){
     gameLogic();
     i = i+1;
   }else{
-    i = 10;
     if(scoreComputer > scoreUser){
       console.log(`Computer wins with the score of ${scoreComputer}`)
     }else{
       console.log(`User wins with the score of ${scoreUser}`)
     }
+    return;
   }
   
 }
