@@ -15,13 +15,13 @@ let i = 0;
 
 // Computer Choics
 const getComputerChoice = function(){
-  let weapons = ['rock', 'paper', 'sissor'];
+  let weapons = ['rock', 'paper', 'scissor'];
   return weapons[Math.trunc(Math.random() * 3)];
 }
 
 // userChoice
 const getUserChoice = function(){
-  let userChoice = readlineSync.question(`Select your weapon from 'rock', 'paper', 'sissor':  `);
+  let userChoice = readlineSync.question(`Select your weapon from 'rock', 'paper', 'scissor':  `);
   return userChoice;
 }
 
@@ -37,13 +37,13 @@ if (computerWeapon === userWeapon.toLowerCase()){
   scoreUser = scoreUser + 1;
   console.log(`Computer Score is ${scoreComputer}`);
   console.log(`Your Score is ${scoreUser}`);
-}else if((computerWeapon === 'rock' && userWeapon.toLowerCase() === 'sissor') || (computerWeapon === 'sissor' && userWeapon.toLowerCase() === 'paper') || (computerWeapon === 'paper' && userWeapon.toLowerCase() === 'rock')){
+}else if((computerWeapon === 'rock' && userWeapon.toLowerCase() === 'scissor') || (computerWeapon === 'scissor' && userWeapon.toLowerCase() === 'paper') || (computerWeapon === 'paper' && userWeapon.toLowerCase() === 'rock')){
   console.log(`Your Choice is ${userWeapon} and Computer Choice is ${computerWeapon}`);
   console.log(`Computer gets a point`);
   scoreComputer = scoreComputer + 2;
   console.log(`Computer Score is ${scoreComputer}`);
   console.log(`Your Score is ${scoreUser}`);
-}else if((computerWeapon === 'rock' && userWeapon.toLowerCase() === 'paper') || (computerWeapon === 'sissor' && userWeapon.toLowerCase() === 'rock') || (computerWeapon === 'paper' && userWeapon.toLowerCase() === 'sissor')){
+}else if((computerWeapon === 'rock' && userWeapon.toLowerCase() === 'paper') || (computerWeapon === 'scissor' && userWeapon.toLowerCase() === 'rock') || (computerWeapon === 'paper' && userWeapon.toLowerCase() === 'scissor')){
   console.log(`Your Choice is ${userWeapon} and Computer Choice is ${computerWeapon}`);
   console.log(`User gets a point`);
   scoreUser = scoreUser + 2;
